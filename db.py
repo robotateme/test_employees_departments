@@ -28,6 +28,9 @@ class DBManager(Database):
     office = 1
     department = 2
     employee = 3
+    """
+    Класс управления данными таблицы
+    """
 
     def get_colleagues_by_user_id(self, user_id):
         """
@@ -70,6 +73,7 @@ class DBSchemaManager(Database):
         Класс менеджер для работы со схемой, исключительно.
         Загрузки схемы и данных
     """
+
     def restore(self, schema_path='storage/database/schema.sql'):
         """
         Производит загрузку схемы из дампа, принимает путь до файла схемы, для возможного улучшения работы приложения
